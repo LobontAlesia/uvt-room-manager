@@ -1,0 +1,65 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem; /* Adaugă padding mai mare pe laterale */
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.home-content {
+  max-width: 50%;
+  margin-right: 2rem; /* Adaugă spațiu între text și imagine */
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  padding: 0.8rem 1.5rem;
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1CAAD9;
+}
+
+.btn-secondary {
+  padding: 0.8rem 1.5rem;
+  background-color: #FFC107;
+  color: #003366;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #FFD54F;
+}
+
+.home-image img {
+  max-width: 100%;
+  height: auto;
+}

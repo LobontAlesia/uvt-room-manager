@@ -1,0 +1,28 @@
+.header {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-title {
+    font-size: 1.5rem;
+  }
+  
+  .header-nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .header-link {
+    color: #FFC107;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .header-link:hover {
+    color: #1CAAD9;
+  }
+  
