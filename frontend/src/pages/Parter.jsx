@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Modal, Button, message } from 'antd'; // Importăm componentele necesare
+import { Modal, Button, message } from 'antd'; // Importăm Ant Design pentru dialoguri și notificări
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import moment from 'moment';
 import './Parter.css';
 
 const Parter = () => {
@@ -28,22 +27,18 @@ const Parter = () => {
   const handleDateSelect = (selectInfo) => {
     const calendarApi = selectInfo.view.calendar;
 
-    const title = prompt('Introdu numele evenimentului:'); // Prompt pentru numele evenimentului
-    const startTime = prompt('Introdu ora de început (format HH:mm):'); // Prompt pentru ora de început
-
-    if (title && startTime) {
-      const [hour, minute] = startTime.split(':').map(Number); // Descompune ora și minutul
-      const start = moment(selectInfo.startStr).set({ hour, minute });
-      const end = start.clone().add(1.5, 'hours'); // Adaugă durata fixă de 1 oră și jumătate
-
+    // Creează un nou eveniment
+    calendarApi.unselect(); // Deselectează zona selectată
+    const title = prompt('Introdu numele evenimentului:');
+    if (title) {
       const newEvent = {
-        id: String(Date.now()), // ID unic
+        id: String(Date.now()), // Un ID unic
         title,
-        start: start.toISOString(),
-        end: end.toISOString(),
+        start: selectInfo.startStr,
+        end: selectInfo.endStr,
       };
 
-      // Adaugă evenimentul în rezervările camerei selectate
+      // Adaugă rezervarea în state-ul specific sălii
       setReservations((prevReservations) => {
         const roomReservations = prevReservations[selectedRoom] || [];
         return {
@@ -52,11 +47,34 @@ const Parter = () => {
         };
       });
 
-      calendarApi.unselect(); // Deselectează zona selectată
       message.success('Rezervarea a fost adăugată cu succes!');
-    } else {
-      message.error('Rezervarea nu a fost creată. Asigură-te că ai completat toate câmpurile.');
     }
+  };
+
+  // Funcție pentru a șterge o rezervare
+  const handleEventClick = (clickInfo) => {
+    Modal.confirm({
+      title: 'Șterge rezervarea',
+      content: `Ești sigur că vrei să ștergi rezervarea "${clickInfo.event.title}"?`,
+      okText: 'Da',
+      cancelText: 'Nu',
+      onOk: () => {
+        // Șterge evenimentul din state
+        setReservations((prevReservations) => {
+          const roomReservations = prevReservations[selectedRoom] || [];
+          const updatedReservations = roomReservations.filter(
+            (event) => event.id !== clickInfo.event.id
+          );
+          return {
+            ...prevReservations,
+            [selectedRoom]: updatedReservations,
+          };
+        });
+
+        clickInfo.event.remove(); // Șterge evenimentul din calendar
+        message.success('Rezervarea a fost ștearsă cu succes!');
+      },
+    });
   };
 
   return (
@@ -130,6 +148,7 @@ const Parter = () => {
           slotMinTime="08:00:00"
           slotMaxTime="22:00:00"
           select={handleDateSelect} // Permite selectarea unei date
+          eventClick={handleEventClick} // Permite ștergerea unui eveniment
         />
       </Modal>
     </div>
