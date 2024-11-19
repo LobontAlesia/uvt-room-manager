@@ -1,0 +1,251 @@
+/* Layout general */
+.profile {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5; /* Fundal consistent cu Dashboard */
+    min-height: 100vh;
+  }
+  
+  /* Banner */
+  .profile-banner {
+    background-color: #003366;
+    color: white;
+    padding: 50px 20px; /* Dimensiuni consistente cu Dashboard */
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .profile-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .profile-banner p {
+    font-size: 1.2rem;
+    color: #ffffff; /* Text alb */
+  }
+  
+  /* Card pentru informațiile utilizatorului */
+  /* Layout general */
+.profile {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5; /* Fundal consistent cu Dashboard */
+    min-height: 100vh;
+  }
+  
+  /* Banner */
+  .profile-banner {
+    background-color: #003366;
+    color: white;
+    padding: 50px 20px; /* Dimensiuni consistente cu Dashboard */
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .profile-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .profile-banner p {
+    font-size: 1.2rem;
+    color: #ffffff; /* Text alb */
+  }
+  
+  /* Card pentru informațiile utilizatorului */
+  .profile-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px; /* Mai mult padding pentru un aspect aerisit */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px; /* Dimensiune consistentă */
+    margin: 30px auto; /* Centrare automată */
+  }
+  
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    background-color: #e0e0e0; /* Fundal gri pentru placeholder */
+  }
+  
+  .profile-card h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 15px;
+  }
+  
+  .profile-card p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .profile-card p strong {
+    color: #003366; /* Accentuează textul important */
+  }
+  
+  /* Rezervările utilizatorului */
+  .reservations h3 {
+    font-size: 1.5rem;
+    color: #003366;
+    margin: 20px 0;
+  }
+  
+  .reservations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .reservations li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Buton pentru editare */
+  .btn-edit {
+    background-color: #1CAAD9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+  }
+  
+  .btn-edit:hover {
+    background-color: #003366;
+    transform: translateY(-2px);
+  }
+
+  /* Modal pentru editare */
+.edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundal semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asigură-te că modalul este deasupra tuturor elementelor */
+  }
+  
+  .edit-card {
+    background-color: white;
+    padding: 30px; /* Padding mai mare pentru aerisire */
+    border-radius: 10px;
+    width: 400px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .edit-card h3 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 20px;
+    text-align: center; /* Centrare pentru titlul modalului */
+  }
+  
+  .edit-card label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .edit-card input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Adaugă efect de adâncime */
+  }
+  
+  .edit-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Butoane pentru acțiuni */
+  .btn-save,
+  .btn-cancel {
+    background-color: #1CAAD9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-save:hover {
+    background-color: #003366;
+  }
+  
+  .btn-cancel {
+    background-color: #f44336;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #d32f2f;
+  }
+  
+  
+  /* Responsivitate */
+  @media (max-width: 768px) {
+    .profile-banner {
+      padding: 30px 15px;
+    }
+  
+    .profile-banner h1 {
+      font-size: 2rem;
+    }
+  
+    .profile-banner p {
+      font-size: 1rem;
+    }
+  
+    .profile-card {
+      width: 100%;
+      max-width: 300px;
+      padding: 20px; /* Ajustare padding pentru ecrane mici */
+    }
+  
+    .profile-photo {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .profile-card h2 {
+      font-size: 1.5rem;
+    }
+  
+    .reservations h3 {
+      font-size: 1.3rem;
+    }
+  
+    .reservations li {
+      font-size: 0.9rem;
+    }
+  
+    .btn-edit {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  }
+  
