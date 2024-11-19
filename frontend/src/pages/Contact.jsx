@@ -15,18 +15,18 @@ const Contact = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Afișează 3 carduri pentru ecrane mari
+    slidesToShow: 3, 
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024, // Pentru ecrane medii
+        breakpoint: 1024, 
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768, // Pentru ecrane mici
+        breakpoint: 768, 
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button, message } from 'antd'; // Importăm Ant Design pentru dialoguri și notificări
+import { Modal, Button, message } from 'antd'; 
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -7,9 +7,9 @@ import interactionPlugin from '@fullcalendar/interaction';
 import './Parter.css';
 
 const Parter = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false); // Controlăm afișarea modalului
-  const [selectedRoom, setSelectedRoom] = useState(''); // Păstrează sala selectată
-  const [reservations, setReservations] = useState({}); // Rezervările pentru fiecare sală
+  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [selectedRoom, setSelectedRoom] = useState(''); 
+  const [reservations, setReservations] = useState({}); 
 
   // Funcție pentru a deschide modalul
   const openModal = (room) => {

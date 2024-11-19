@@ -1,8 +1,7 @@
-/* Layout general */
 .profile {
     text-align: center;
     padding: 20px;
-    background-color: #f5f5f5; /* Fundal consistent cu Dashboard */
+    background-color: #f5f5f5; 
     min-height: 100vh;
   }
   
@@ -10,7 +9,7 @@
   .profile-banner {
     background-color: #003366;
     color: white;
-    padding: 50px 20px; /* Dimensiuni consistente cu Dashboard */
+    padding: 50px 20px; 
     border-radius: 10px;
     margin-bottom: 30px;
   }
@@ -22,23 +21,20 @@
   
   .profile-banner p {
     font-size: 1.2rem;
-    color: #ffffff; /* Text alb */
+    color: #ffffff;
   }
   
-  /* Card pentru informațiile utilizatorului */
-  /* Layout general */
 .profile {
     text-align: center;
     padding: 20px;
-    background-color: #f5f5f5; /* Fundal consistent cu Dashboard */
+    background-color: #f5f5f5; 
     min-height: 100vh;
   }
   
-  /* Banner */
   .profile-banner {
     background-color: #003366;
     color: white;
-    padding: 50px 20px; /* Dimensiuni consistente cu Dashboard */
+    padding: 50px 20px; 
     border-radius: 10px;
     margin-bottom: 30px;
   }
@@ -50,19 +46,19 @@
   
   .profile-banner p {
     font-size: 1.2rem;
-    color: #ffffff; /* Text alb */
+    color: #ffffff; 
   }
   
-  /* Card pentru informațiile utilizatorului */
+
   .profile-card {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 30px; /* Mai mult padding pentru un aspect aerisit */
+    padding: 30px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 400px; /* Dimensiune consistentă */
-    margin: 30px auto; /* Centrare automată */
+    width: 400px;
+    margin: 30px auto; 
   }
   
   .profile-photo {
@@ -71,7 +67,7 @@
     border-radius: 50%;
     margin-bottom: 15px;
     object-fit: cover;
-    background-color: #e0e0e0; /* Fundal gri pentru placeholder */
+    background-color: #e0e0e0;
   }
   
   .profile-card h2 {
@@ -87,10 +83,10 @@
   }
   
   .profile-card p strong {
-    color: #003366; /* Accentuează textul important */
+    color: #003366; 
   }
   
-  /* Rezervările utilizatorului */
+
   .reservations h3 {
     font-size: 1.5rem;
     color: #003366;
@@ -127,23 +123,22 @@
     transform: translateY(-2px);
   }
 
-  /* Modal pentru editare */
 .edit-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundal semi-transparent */
+    background-color: rgba(0, 0, 0, 0.5); 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Asigură-te că modalul este deasupra tuturor elementelor */
+    z-index: 1000; 
   }
   
   .edit-card {
     background-color: white;
-    padding: 30px; /* Padding mai mare pentru aerisire */
+    padding: 30px; 
     border-radius: 10px;
     width: 400px;
     text-align: left;
@@ -154,7 +149,7 @@
     font-size: 1.8rem;
     color: #003366;
     margin-bottom: 20px;
-    text-align: center; /* Centrare pentru titlul modalului */
+    text-align: center; 
   }
   
   .edit-card label {
@@ -171,7 +166,7 @@
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Adaugă efect de adâncime */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); 
   }
   
   .edit-actions {
@@ -180,7 +175,6 @@
     margin-top: 20px;
   }
   
-  /* Butoane pentru acțiuni */
   .btn-save,
   .btn-cancel {
     background-color: #1CAAD9;
@@ -206,7 +200,6 @@
   }
   
   
-  /* Responsivitate */
   @media (max-width: 768px) {
     .profile-banner {
       padding: 30px 15px;
@@ -223,7 +216,7 @@
     .profile-card {
       width: 100%;
       max-width: 300px;
-      padding: 20px; /* Ajustare padding pentru ecrane mici */
+      padding: 20px; 
     }
   
     .profile-photo {

@@ -6,11 +6,11 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleRegisterRedirect = () => {
-    navigate("/register"); // Redirecționează utilizatorul la pagina de înregistrare
+    navigate("/register"); 
   };
 
   const handleLoginSubmit = (e) => {
-    e.preventDefault(); // Previi comportamentul implicit al formularului
+    e.preventDefault();
     console.log("Login submitted");
   };
 
@@ -27,13 +27,13 @@ const Login = () => {
             <label htmlFor="password">Parolă:</label>
             <input type="password" id="password" placeholder="Introduceți parola" required />
           </div>
-          <button type="submit" className="btn-login">
+          <button type="submit" className="btn">
             Login
           </button>
         </form>
         <p className="register-text">
           Nu ai cont?{" "}
-          <button onClick={handleRegisterRedirect} className="btn-register">
+          <button onClick={handleRegisterRedirect} className="btn-login">
             Creează un cont
           </button>
         </p>

@@ -41,6 +41,21 @@ const Profile = () => {
     }));
   };
 
+  // Funcție pentru încărcarea pozei
+  const handlePhotoUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setEditProfile((prev) => ({
+          ...prev,
+          photo: reader.result, // Setează imaginea sub formă de URL
+        }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <div className="profile">
       {/* Banner */}
@@ -99,12 +114,11 @@ const Profile = () => {
               />
             </label>
             <label>
-              Poză de Profil (URL):
+              Poză de Profil:
               <input
-                type="text"
-                name="photo"
-                value={editProfile.photo}
-                onChange={handleChange}
+                type="file"
+                accept="image/*"
+                onChange={handlePhotoUpload}
               />
             </label>
             <div className="edit-actions">
