@@ -11,6 +11,7 @@ import image4 from '../assets/3.jpg';
 import image5 from '../assets/4.jpg';
 import image6 from '../assets/5.jpg';
 
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -47,6 +48,7 @@ const Home = () => {
           <div>
             <img src={image6} alt="Sala 6 UVT" className="slider-image" />
           </div>
+
         </Slider>
       </div>
 
