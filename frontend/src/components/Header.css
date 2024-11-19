@@ -1,28 +1,78 @@
 .header {
-    background-color: #003366;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
+  background-color: white; /* Fundal alb */
+  border-bottom: 1px solid #ddd; /* Linie sub header */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333; /* Text negru */
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-link {
+  font-size: 1rem;
+  color: #333; /* Text negru */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.header-link:hover {
+  color: #1a73e8; /* Albastru pentru hover */
+  border-bottom: 2px solid #1a73e8;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-profile:hover .profile-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivitate */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
     align-items: center;
   }
-  
-  .header-title {
-    font-size: 1.5rem;
-  }
-  
+
   .header-nav {
-    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
+    margin-top: 10px;
   }
-  
-  .header-link {
-    color: #FFC107;
-    text-decoration: none;
-    font-weight: bold;
+
+  .header-logo {
+    font-size: 1.2rem;
   }
-  
-  .header-link:hover {
-    color: #1CAAD9;
-  }
-  
+}
