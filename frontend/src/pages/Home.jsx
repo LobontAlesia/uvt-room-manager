@@ -4,8 +4,13 @@ import Slider from 'react-slick';
 import './Home.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import image1 from '../assets/1.jpg';
-import image2 from '../assets/2.jpg';
+import image1 from '../assets/0.jpg';
+import image2 from '../assets/1.jpg';
+import image3 from '../assets/2.jpg';
+import image4 from '../assets/3.jpg';
+import image5 from '../assets/4.jpg';
+import image6 from '../assets/5.jpg';
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -31,6 +36,19 @@ const Home = () => {
           <div>
             <img src={image2} alt="Sala 2 UVT" className="slider-image" />
           </div>
+          <div>
+            <img src={image3} alt="Sala 3 UVT" className="slider-image" />
+          </div>
+          <div>
+            <img src={image4} alt="Sala 4 UVT" className="slider-image" />
+          </div>
+          <div>
+            <img src={image5} alt="Sala 5 UVT" className="slider-image" />
+          </div>
+          <div>
+            <img src={image6} alt="Sala 6 UVT" className="slider-image" />
+          </div>
+
         </Slider>
       </div>
 
