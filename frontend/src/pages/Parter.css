@@ -1,86 +1,120 @@
 .parter {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .button-container {
-    display: flex;
-    gap: 20px; /* Spațiu mai mare între butoane */
-    margin-top: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .floor-button {
-    padding: 20px 40px; /* Dimensiune mai mare a butoanelor pentru etaje */
-    font-size: 20px; /* Font mai mare */
-    background-color: #003366;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .floor-button.active {
-    background-color: #FFC107; /* Galben pentru butonul activ */
-    color: #003366; /* Text închis pentru contrast */
-  }
-  
-  .floor-button:hover {
-    background-color: #1CAAD9;
-  }
-  
-  .sketchfab-embed-wrapper {
-    margin-top: 30px;
-    width: 100%;
-    height: 70vh; /* Înălțimea iframe-ului */
-  }
-  
-  .sketchfab-embed-wrapper iframe {
-    width: 100%; /* Modelul ocupă toată lățimea paginii */
-    height: 100%; /* Înălțimea ajustată proporțional */
-    border: none;
-  }
-  
-  .section {
-    margin: 40px 0; /* Spațiu mai mare între secțiuni */
-  }
-  
-  .section h2 {
-    font-size: 2.5rem; /* Font mai mare pentru titlurile secțiunilor */
-    color: #003366;
-    margin-bottom: 20px;
-  }
-  
-  .room-button {
-    padding: 20px 40px; /* Dimensiune mai mare pentru butoane */
-    font-size: 20px; /* Font mai mare */
-    background-color: #1CAAD9;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .room-button:hover {
-    background-color: #003366;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9; /* Fundal deschis */
+  min-height: 100vh; /* Umple întreaga înălțime a ecranului */
+}
+
+/* Container pentru butoane etaje */
+.button-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Butoane pentru etaje */
+.floor-button {
+  padding: 20px 40px;
+  font-size: 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.floor-button.active {
+  background-color: #FFC107;
+  color: #003366;
+  transform: translateY(-2px); /* Butonul activ este puțin ridicat */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.floor-button:hover {
+  background-color: #1CAAD9;
+  transform: translateY(-2px);
+}
+
+/* Container iframe */
+.sketchfab-embed-wrapper {
+  margin-top: 30px;
+  width: 100%;
+  height: 70vh;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sketchfab-embed-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Secțiuni Amfiteatre și Laboratoare */
+.section {
+  margin: 40px 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+/* Butoane săli */
+.room-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #1CAAD9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.room-button:hover {
+  background-color: #003366;
+  transform: translateY(-2px);
+}
+
+/* Stil pentru modal */
+.ant-modal {
+  text-align: left;
+  border-radius: 10px; /* Colțuri rotunjite */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adaugă o umbră mai pronunțată */
+}
+
+.ant-modal-title {
+  font-size: 1.8rem;
+  color: #003366;
+}
+
+.ant-modal-body {
+  padding: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsivitate */
+@media (max-width: 768px) {
+  .floor-button, .room-button {
+    padding: 10px 20px;
+    font-size: 16px;
   }
 
-  .ant-modal {
-    text-align: left;
-  }
-  
-  .ant-modal-title {
+  .section h2 {
     font-size: 1.5rem;
-    color: #003366;
   }
-  
-  .ant-modal-body {
-    padding: 20px;
+
+  .sketchfab-embed-wrapper {
+    height: 50vh; /* Ajustare pentru ecrane mici */
   }
-  
-  
-  
+}

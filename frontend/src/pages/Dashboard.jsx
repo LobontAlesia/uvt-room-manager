@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
-// Importăm pictogramele FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding as solidBuilding } from '@fortawesome/free-solid-svg-icons';
 import { faBuilding as regularBuilding } from '@fortawesome/free-regular-svg-icons';
@@ -10,14 +9,14 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   const handleNavigation = (path) => {
-    navigate(path); // Navighează către ruta specificată
+    navigate(path); 
   };
 
   return (
     <div className="dashboard">
       {/* Banner */}
       <div className="dashboard-banner">
-        <h1>Bine ai venit pe Dashboard</h1>
+        <h1>Bine ai venit pe Dashboard!</h1>
         <p>Accesează sălile și organizează evenimentele tale eficient!</p>
       </div>
 
@@ -31,7 +30,7 @@ const Dashboard = () => {
           >
             <div className="floor-icon">
               <FontAwesomeIcon
-                icon={i % 2 === 0 ? solidBuilding : regularBuilding} // Alternăm între bold și regular
+                icon={i % 2 === 0 ? solidBuilding : regularBuilding} 
                 size="2x"
               />
             </div>

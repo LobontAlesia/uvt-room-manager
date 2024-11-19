@@ -53,7 +53,7 @@
 /* Pictogramele pentru etaje */
 .floor-icon {
   margin-bottom: 15px;
-  color: #003366; /* Culoare pentru pictograme */
+  color: #003366; 
 }
 
 .floor-card h2 {
@@ -67,7 +67,7 @@
   color: #666;
 }
 
-/* Responsivitate */
+
 @media (max-width: 768px) {
   .dashboard-banner {
     padding: 30px 15px;

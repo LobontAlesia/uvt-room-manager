@@ -4,11 +4,8 @@ import Slider from 'react-slick';
 import './Home.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-// Import explicit al imaginilor
 import image1 from '../assets/1.jpg';
 import image2 from '../assets/2.jpg';
-// import uvtImage from './assets/uvt.jpg';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -26,7 +23,6 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* Header cu slider */}
       <div className="home-slider">
         <Slider {...sliderSettings}>
           <div>
@@ -38,7 +34,6 @@ const Home = () => {
         </Slider>
       </div>
 
-      {/* Conținut principal */}
       <div className="home-content">
         <h1>Gestionarea eficientă a sălilor Universității de Vest din Timișoara</h1>
         <p>
@@ -53,7 +48,7 @@ const Home = () => {
           Începe acum
         </button>
         <button
-          className="btn-secondary"
+          className="btn-primary"
           onClick={() => navigate('/contact')}
         >
           Află mai multe

@@ -1,6 +1,6 @@
 .header {
-  background-color: white; /* Fundal alb */
-  border-bottom: 1px solid #ddd; /* Linie sub header */
+  background-color: white; 
+  border-bottom: 1px solid #ddd; 
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -19,7 +19,7 @@
 .header-logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333; /* Text negru */
+  color: #333; 
 }
 
 .header-nav {
@@ -30,7 +30,7 @@
 
 .header-link {
   font-size: 1rem;
-  color: #333; /* Text negru */
+  color: #333; 
   text-decoration: none;
   font-weight: 500;
   padding: 5px 0;
@@ -38,7 +38,7 @@
 }
 
 .header-link:hover {
-  color: #1a73e8; /* Albastru pentru hover */
+  color: #1a73e8; 
   border-bottom: 2px solid #1a73e8;
 }
 
