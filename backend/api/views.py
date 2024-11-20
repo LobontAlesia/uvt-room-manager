@@ -17,3 +17,13 @@ def getData(request, username='alex', password='da'):
         return Response({'response':'{}'.format(token)})
     else:
         return Response({'response':'false'})
+
+@api_view(['GET'])
+def newUser(request, username, password, role='user'):
+    con = sql.connect('../db/db.db')
+    cur = con.cursor()
+    cur.execute(
+        "INSERT INTO users VALUES('{}','{}','{}')".format(username, password, role)
+    )
+    con.commit()
+    return Response({'response':'ok'})
